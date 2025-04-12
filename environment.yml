@@ -3,11 +3,9 @@ channels:
   - defaults
 dependencies:
   - python=3.12.*
-  - numpy=2.2.*
-  - matplotlib=3.10.*
   - pip
   - pip:
     - -e .[dev]
     # .  # bare minimum
     # - .[dev,jupyter,jax,data,misc]  # include all optional dependencies
-    # - -e .[dev,jupyter,jax,data,misc]  # include optional dependencies in editing mode
+    # - -e .[dev,jupyter,jax,data,misc]  # optional dependencies in editing mode

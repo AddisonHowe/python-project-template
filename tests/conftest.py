@@ -5,7 +5,7 @@
 import pytest
 import shutil
 
-DATDIR = "tests/_data"  # data directory for all tests.
+DATDIR = "tests/data"  # data directory for all tests.
 TMPDIR = "tests/_tmp"  # output directory for all tests.
 
 def remove_dir(dir:str):
