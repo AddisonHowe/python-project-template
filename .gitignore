@@ -1,3 +1,11 @@
+**/.DS_Store
+out/
+logs/
+jobs/
+tests/_tmp/
+.github/CODEOWNERS
+delme.*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

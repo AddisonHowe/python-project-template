@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "myproject"
+dynamic = ["version"]
+requires-python = ">= 3.8"
+readme = "README.md"
+description = "Python project template."
+authors = [
+  {name = "Addison Howe"},
+]
+dependencies = [
+  "numpy>=2.2",
+  "matplotlib>=3.10",
+]
+
+[project.scripts]
+myproject = "myproject.__main__:main"
+
+[project.optional-dependencies]
+jax = [
+  "jax>=0.5",
+  "equinox>=0.11",
+]
+jupyter = [
+  "ipykernel",
+  "ipywidgets",
+]
+dev = [
+  "pytest>=8.3",
+]
+data = [
+  "scipy>=1.15",
+  "pandas>=2.2",
+  "scikit-learn>=1.6",
+  "seaborn",
+]
+misc = [
+  "tqdm>=4.67",
+]
