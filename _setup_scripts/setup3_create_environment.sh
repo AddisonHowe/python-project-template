@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #=============================================================================
 #
 # FILE: create_environment.sh
@@ -20,6 +20,3 @@ case "$answer" in
 esac
 
 conda env create -p ./env -f environment.yml --yes
-
-echo "Activating newly created environment"
-conda activate ./env
