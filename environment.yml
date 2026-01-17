@@ -7,5 +7,5 @@ dependencies:
   - pip:
     - -e .[dev]
     # .  # bare minimum
-    # - .[dev,jupyter,jax,data,misc]  # include all optional dependencies
-    # - -e .[dev,jupyter,jax,data,misc]  # optional dependencies in editing mode
+    # - .[dev,notebook]  # include optional dependencies
+    # - -e .[dev,notebook]  # optional dependencies in editing mode
