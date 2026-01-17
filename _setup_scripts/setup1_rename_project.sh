@@ -12,12 +12,16 @@
 # EXAMPLE: sh _setup_scripts/rename_project.sh mynewproject
 #=============================================================================
 
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 name"
+if [ "$#" -gt 1 ]; then
+    echo "Usage: $0 [name]"
     exit 1
 fi
 
-newname=$1
+if [ "$#" -eq 1 ]; then
+    newname=$1
+else
+    read -p "Enter new project name." newname
+fi
 
 OLDNAME="myproject"
 

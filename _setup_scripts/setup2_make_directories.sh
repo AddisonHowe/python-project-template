@@ -14,7 +14,7 @@
 set -euo pipefail
 
 # Default directories
-DEFAULT_DIRS=(out scripts logs notebooks)
+DEFAULT_DIRS=(data out scripts logs notebooks)
 
 # If arguments are provided, use them directly
 if [ "$#" -gt 0 ]; then

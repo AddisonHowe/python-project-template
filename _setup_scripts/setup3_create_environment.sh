@@ -20,3 +20,6 @@ case "$answer" in
 esac
 
 conda env create -p ./env -f environment.yml --yes
+
+echo "Activating newly created environment"
+conda activate ./env
