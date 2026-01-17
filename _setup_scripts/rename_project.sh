@@ -7,7 +7,7 @@
 #
 # DESCRIPTION: Replaces all occurences of the default name "myproject" with the
 #  given new name. Only handles occurences in the default project state, and 
-#  shouldbe run immediately after cloning.
+#  should be run immediately after cloning.
 #
 # EXAMPLE: sh _setup_scripts/rename_project.sh mynewproject
 #=============================================================================
@@ -36,7 +36,7 @@ esac
 flist=(
     "setup.py"
     "pyproject.toml"
-    "${OLDNAME}/__main__.py"
+    "src/${OLDNAME}/__main__.py"
     "tests/test_core.py"
     "README.md"
 )
@@ -47,4 +47,4 @@ for f in ${flist[@]}; do
 done
 
 # Rename src directory
-mv ${OLDNAME} ${newname}
+mv src/${OLDNAME} src/${newname}
