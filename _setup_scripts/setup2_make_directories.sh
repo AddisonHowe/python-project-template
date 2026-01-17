@@ -16,11 +16,22 @@ set -euo pipefail
 # Default directories
 DEFAULT_DIRS=(out scripts logs notebooks)
 
-# If arguments are provided, use them; otherwise use defaults
+# If arguments are provided, use them directly
 if [ "$#" -gt 0 ]; then
     DIRS=("$@")
 else
-    DIRS=("${DEFAULT_DIRS[@]}")
+    echo "No directories specified."
+    read -r -p "Would you like to create the default directories (${DEFAULT_DIRS[*]})? [y/N] " reply
+
+    case "$reply" in
+        [Yy]|[Yy][Ee][Ss])
+            DIRS=("${DEFAULT_DIRS[@]}")
+            ;;
+        *)
+            echo "No directories created."
+            exit 0
+            ;;
+    esac
 fi
 
 for dir in "${DIRS[@]}"; do
