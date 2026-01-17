@@ -3,11 +3,11 @@
 #
 # FILE: rename_project.sh
 #
-# USAGE: rename_project.sh name
+# USAGE: rename_project.sh [name]
 #
 # DESCRIPTION: Replaces all occurences of the default name "myproject" with the
-#  given new name. Only handles occurences in the default project state, and 
-#  should be run immediately after cloning.
+#   given new name, or prompts for new name. Only handles occurences in the 
+#   default project state, and should be run immediately after cloning.
 #
 # EXAMPLE: sh _setup_scripts/rename_project.sh mynewproject
 #=============================================================================
@@ -20,13 +20,13 @@ fi
 if [ "$#" -eq 1 ]; then
     newname=$1
 else
-    read -p "Enter new project name." newname
+    read -p "Enter new project name: " newname
 fi
 
 OLDNAME="myproject"
 
 read -p "This action will alter current files and directories. 
-Occurences of '$OLDNAME' will be replaced with '$name'. 
+Occurences of '$OLDNAME' will be replaced with '$newname'. 
 Do you want to continue? (y/n): " answer
 
 case "$answer" in
