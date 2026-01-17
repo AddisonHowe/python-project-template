@@ -1,10 +1,7 @@
-**/.DS_Store
-out/
-logs/
-jobs/
 tests/_tmp/
-.github/CODEOWNERS
 delme.*
+
+**/.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
